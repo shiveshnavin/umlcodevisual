@@ -51,7 +51,7 @@ var x=`#arrowSize : 0.7
 [HheadQuater]->[Building 2]
 [HheadQuater]->[Building 3|[Floor 1|desk1 | desk2 ]]
 [HheadQuater]--[<state>Highway]
-[Highway]-->[Building 4]
+[Highway]-->[<database>Building 4]
 [Building 1]-->[<abstract>garden]
 
 `;
@@ -62,7 +62,7 @@ var x2=`#arrowSize : 0.7
 [HheadQuater]->[Building 2]
 [HheadQuater]->[Building 3|[Floor 1|desk1 | desk2 ]]
 [HheadQuater]--[<state>Highway]
-[Highway]-->[Building 4]
+[Highway]-->[<database>Building 4]
 [Building 1]-->[<abstract>garden]
 
 `;
