@@ -11,50 +11,34 @@
 <link rel="stylesheet" href="nomnoml.css?v=1">
 <link rel="shortcut icon" href="favicon.png">
 </head>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
 <body>
 	<div class="wrap">
 
 		<canvas id="canvas"></canvas>
-			<textarea id="textarea" style="width:66%" spellcheck="false"></textarea>
+		<form id="myForm" action="/view" method="post">
+		
+			<textarea id="textarea" style="width:70%" spellcheck="false" name="code"></textarea>
+			
+			</form>
+			
 		<div id="con_textarea" style="display:none;">
 		</div>
 		<div id="linenumbers"></div>
-		<div id="canvas-panner" style="width: 100%;"></div>
+		<div id="canvas-panner" style="width: 33%;"></div>
 
 	<script>
 	
-	var canvass=document.getElementById("canvas-panner");
 	var textarea=document.getElementById("textarea");
-	var view_abt=document.getElementById("view_abt");
-	function edit()
-	{
-	
-	view_abt=document.getElementById("view_abt");
-		canvass.style.width = "20%";
-		textarea.style.width = "80%";
-		view_abt.innerHTML="VIEW";
-		
-	}
-	
-	function view()
-	{
-	
-	view_abt=document.getElementById("view_abt");
-		canvass.style.width = "100%";
-		textarea.style.width = "1%"
-		view_abt.innerHTML="EDIT";
 
-	}
 	function showhide()
 	{
-		if(textarea.style.width !== "80%")
-		{
-			view();
-		}
-		else
-		{
-			edit();
-		}
+	document.getElementById("myForm").submit();
+
+		
 	}
 	</script>
 		<div id="reference" class="sidebar">
@@ -482,26 +466,10 @@
 		setInterval(cycleCommercial, 10000)
 	</script>
 
-	<script type="text/vnd.nomnoml.class" id="defaultGraph">[Pirate|eyeCount: Int|raid();pillage()|
-  [beard]--[parrot]
-  [beard]-:>[foul mouth]
-]
-
-[<abstract>Marauder]<:--[Pirate]
-[Pirate]- 0..7[mischief]
-[jollyness]->[Pirate]
-[jollyness]->[rum]
-[jollyness]->[singing]
-[Pirate]-> *[rum|tastiness: Int|swig()]
-[Pirate]->[singing]
-[singing]<->[rum]
-
-[<start>st]->[<state>plunder]
-[plunder]->[<choice>more loot]
-[more loot]->[st]
-[more loot] no ->[<end>e]
-
-[<actor>Sailor] - [<usecase>shiver me;timbers]</script>
+	<script type="text/vnd.nomnoml.class" id="defaultGraph">
+	
+	[code]
+	</script>
 
 	<script src="lib/underscore.min.js"></script>
 	<script src="lib/filesaver.min.js"></script>
