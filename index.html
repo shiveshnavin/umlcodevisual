@@ -467,8 +467,16 @@
 	</script>
 
 	<script type="text/vnd.nomnoml.class" id="defaultGraph">
-	
-	[code]
+	#arrowSize : 0.7
+
+[HheadQuater]->[Building 1]
+[HheadQuater]->[Building 2]
+[HheadQuater]->[Building 3|[Floor 1|desk1 | desk2 ]]
+[HheadQuater]--[<state>Highway]
+[Highway]-->[Building 4]
+[Building 1]-->[<abstract>garden]
+
+
 	</script>
 
 	<script src="lib/underscore.min.js"></script>
