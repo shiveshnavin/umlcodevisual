@@ -46,6 +46,19 @@ app.listen(process.env.PORT || 4000, function () {
 })
 
 var x=`#arrowSize : 0.7
+#arrowSize: 0.5
+#edges: hard 
+#lineWidth: 1
+#spacing: 30
+#title: Determination Engine
+#font: helvetica
+#fontSize: 10
+#visual:frame 
+#stroke:#000 
+#fill:#fff
+#.comp : #visual:frame 
+#gutter :1
+
 
 [HheadQuater]->[Building 1]
 [HheadQuater]->[Building 2]
